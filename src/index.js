@@ -5,6 +5,8 @@ import { render } from 'react-dom';
 
 // == Import : local
 import App from 'src/components/App';
+// import de Semantic UI
+import 'semantic-ui-css/semantic.min.css';
 
 
 // == Render
