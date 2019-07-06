@@ -28,7 +28,7 @@ const SearchBar = ({
       </Form>
     </Segment>
   );
-}
+};
 
 // Validation
 SearchBar.propTypes = {
