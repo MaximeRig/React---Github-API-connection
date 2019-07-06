@@ -5,11 +5,12 @@ const initialState = {
 };
 
 // Action types
+const CHANGE_INPUT = 'CHANGE_INPUT';
 
 // Reducer
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case 'CHANGE_INPUT':
+    case CHANGE_INPUT:
       return {
         // return all properties from state
         ...state,
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 // Action creators
+
 
 // Selectors
 
