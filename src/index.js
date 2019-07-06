@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 
 // == Import : local
-import App from 'src/components/App';
+import App from 'src/containers/App';
 // import de Semantic UI
 import 'semantic-ui-css/semantic.min.css';
 
