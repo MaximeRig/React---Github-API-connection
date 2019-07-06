@@ -23,7 +23,10 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 // Action creators
-
+export const changeInput = inputValue => ({
+  type: CHANGE_INPUT,
+  inputValue,
+});
 
 // Selectors
 
