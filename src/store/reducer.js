@@ -5,6 +5,7 @@ const initialState = {
   searchInputValue: '',
   listRepoData: [],
   view: 'emptySearch',
+  displayMode: 'grid',
 };
 
 // Action types
@@ -12,6 +13,7 @@ const CHANGE_INPUT = 'CHANGE_INPUT';
 const START_LOADING = 'START_LOADING';
 const LOAD_DATA = 'LOAD_DATA';
 const ERROR_LOADING = 'ERROR_LOADING';
+const CHANGE_MODE = 'CHANGE_MODE';
 
 // Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -43,6 +45,12 @@ const reducer = (state = initialState, action = {}) => {
         view: 'errorLoading',
       };
 
+    case CHANGE_MODE:
+      return {
+        ...state,
+        displayMode: action.displayMode,
+      };
+
     default:
       return state;
   }
@@ -69,6 +77,11 @@ export const getRepos = (inputValue) => {
       error => (dispatch({ type: ERROR_LOADING, error })),
     );
 };
+
+export const ChangeDisplayMode = mode => ({
+  type: CHANGE_MODE,
+  displayMode: mode,
+});
 
 // Selectors
 

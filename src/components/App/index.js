@@ -7,6 +7,7 @@ import './app.scss';
 
 // import containers
 import SearchBar from 'src/containers/SearchBar';
+import RepoList from 'src/containers/RepoList';
 
 // component
 const App = ({ view }) => (
@@ -16,7 +17,7 @@ const App = ({ view }) => (
       <div>Veuillez sasir votre recherche dans le champ ci-dessus</div>
     )}
     {view === 'findRepos' && (
-      {/* <RepoList /> */}
+      <RepoList />
     )}
     {view === 'errorLoading' && (
       <div>Erreur lors du chargement des données, veuillez saisir une nouvelle recherche</div>
