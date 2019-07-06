@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import SearchBar from 'src/components/SearchBar';
 
 // Action creators import
-import { changeInput } from 'src/store/reducer';
+import { changeInput, submitFormRepo } from 'src/store/reducer';
 
 const mapStateToProps = state => ({
   loading: state.loading,
@@ -18,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onChangeInput: (inputValue) => {
       dispatch(changeInput(inputValue));
+    },
+    submitFormRepo: () => {
+      
     },
   };
 };

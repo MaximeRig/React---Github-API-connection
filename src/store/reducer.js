@@ -17,6 +17,7 @@ const reducer = (state = initialState, action = {}) => {
         // return new value for searchInputValue
         searchInputValue: action.inputValue,
       };
+
     default:
       return state;
   }
@@ -27,6 +28,7 @@ export const changeInput = inputValue => ({
   type: CHANGE_INPUT,
   inputValue,
 });
+
 
 // Selectors
 
