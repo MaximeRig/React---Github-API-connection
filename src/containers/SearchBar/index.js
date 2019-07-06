@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import SearchBar from 'src/components/SearchBar';
 
 // Action creators import
-import { changeInput, submitFormRepo } from 'src/store/reducer';
+import { changeInput, getRepos, loadingOn } from 'src/store/reducer';
 
 const mapStateToProps = state => ({
   loading: state.loading,
@@ -14,16 +14,15 @@ const mapStateToProps = state => ({
 
 
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onChangeInput: (inputValue) => {
-      dispatch(changeInput(inputValue));
-    },
-    submitFormRepo: () => {
-      
-    },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onChangeInput: (inputValue) => {
+    dispatch(changeInput(inputValue));
+  },
+  submitFormRepo: (inputValue) => {
+    dispatch(loadingOn());
+    dispatch(getRepos(inputValue));
+  },
+});
 
 // connect
 const SearchBarContainer = connect(

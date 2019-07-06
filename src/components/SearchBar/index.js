@@ -14,9 +14,14 @@ const SearchBar = ({
     const { value } = event.target;
     onChangeInput(value);
   };
+
+  const submitHandler = () => {
+    submitFormRepo(searchInputValue);
+  };
+
   return (
     <Segment>
-      <Form inverted onSubmit={submitFormRepo}>
+      <Form inverted onSubmit={submitHandler}>
         <Form.Field>
           <Input value={searchInputValue} onChange={changeHandler} loading={loading} placeholder="Recherche de repository GitHub" />
         </Form.Field>
