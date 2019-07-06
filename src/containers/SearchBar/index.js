@@ -15,9 +15,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onChangeInput: () => {
+    onChangeInput: (inputValue) => {
       dispatch({
         type: 'CHANGE_INPUT',
+        inputValue,
       });
     },
   };
